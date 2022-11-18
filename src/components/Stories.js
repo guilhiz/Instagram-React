@@ -1,55 +1,56 @@
+const stories = [
+  {
+    src: "assets/images/story/guilhiz.jpeg",
+    name: "guilhiz",
+  },
+  {
+    src: "assets/images/story/mckako.jpeg",
+    name: "mckako",
+  },
+  {
+    src: "assets/images/story/sacy.jpg",
+    name: "sacy",
+  },
+  {
+    src: "assets/images/story/loud-story.jpg",
+    name: "loud",
+  },
+  {
+    src: "assets/images/story/muzy.jpeg",
+    name: "paulomuzy",
+  },
+  {
+    src: "assets/images/story/driven1.png",
+    name: "driven",
+  },
+  {
+    src: "assets/images/story/therock.jpeg",
+    name: "therock",
+  },
+  {
+    src: "assets/images/story/valorant.jpeg",
+    name: "valorant",
+  },
+];
+
 export default function Stories() {
   return (
     <div class="container-story">
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/guilhiz.jpeg" alt="profile picture" />
-        </div>
-        <p>guilhiz</p>
+      {stories.map((el) => (
+        <Storie name={el.name} src={el.src} />
+      ))}
+    </div>
+  );
+}
+
+function Storie(props) {
+  console.log(props);
+  return (
+    <div class="story-content">
+      <div class="story-image">
+        <img src={props.src} alt="profile picture" />
       </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/mckako.jpeg" alt="profile picture" />
-        </div>
-        <p>mckako</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/sacy.jpg" alt="profile picture" />
-        </div>
-        <p>sacy</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/loud-story.jpg" alt="profile picture" />
-        </div>
-        <p>loud</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/muzy.jpeg" alt="profile picture" />
-        </div>
-        <p>paulomuzy</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/driven1.png" alt="profile picture" />
-        </div>
-        <p>driven</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/therock.jpeg" alt="profile picture" />
-        </div>
-        <p>therock</p>
-      </div>
-      <div class="story-content">
-        <div class="story-image">
-          <img src="./assets/images/story/valorant.jpeg" alt="profile picture" />
-        </div>
-        <p>valorant</p>
-        <ion-icon name="chevron-forward-circle"></ion-icon>
-      </div>
+      <p>{props.name}</p>
     </div>
   );
 }

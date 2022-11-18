@@ -20,7 +20,6 @@ body {
 
 .container {
   max-width: 1366px;
-  max-height: 2000px;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -476,7 +475,6 @@ footer {
 
   .container {
     width: 100%;
-    height: 1800px;
   }
 
   .post-image img {

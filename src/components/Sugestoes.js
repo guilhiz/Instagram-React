@@ -1,35 +1,35 @@
 const sugestoes = [
-{
-    src: "./assets/images/aside/aspas.jpeg",
-    nome: "aspaszin",
+  {
+    src: "assets/images/aside/aspas.jpeg",
+    name: "aspaszin",
     status: "Segue você",
-    alt: "profile image"
-},
-{
-  src: "./assets/images/aside/f1.png",
-  nome: "formula1",
-  status: "Segue você",
-  alt: "profile image"
-},
-{
-  src: "./assets/images/aside/xandzizi.jpg",
-  nome: "xandzizi",
-  status: "Novo no Instagram",
-  alt: "profile image"
-},
-{
-  src: "./assets/images/aside/neymar.jpeg",
-  nome: "neymarjr",
-  status: "Segue você",
-  alt: "profile image"
-},
-{
-  src: "./assets/images/aside/kevinhart.jpg",
-  nome: "kevinhart4real",
-  status: "Segue você",
-  alt: "profile image"
-}
-]
+    alt: "Aspas profile image",
+  },
+  {
+    src: "assets/images/aside/f1.png",
+    name: "formula1",
+    status: "Segue você",
+    alt: "Formula1 profile image",
+  },
+  {
+    src: "assets/images/aside/xandzizi.jpg",
+    name: "xandzizi",
+    status: "Novo no Instagram",
+    alt: "Xand profile image",
+  },
+  {
+    src: "assets/images/aside/neymar.jpeg",
+    name: "neymarjr",
+    status: "Segue você",
+    alt: "Neymar profile image",
+  },
+  {
+    src: "assets/images/aside/kevinhart.jpg",
+    name: "kevinhart4real",
+    status: "Segue você",
+    alt: "Kevin Hart profile image",
+  },
+];
 
 export default function Sugestoes() {
   return (
@@ -41,61 +41,24 @@ export default function Sugestoes() {
         <button>Ver tudo</button>
       </div>
 
-      <div class="aside-profiles">
-        <div class="aside-profiles-username">
-          <img class="username-short-image" src="./assets/images/aside/aspas.jpeg" alt="" />
-          <div>
-            <p>aspaszin</p>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <button>seguir</button>
-      </div>
+      {sugestoes.map((el) => (
+        <Sugestao name={el.name} alt={el.alt} src={el.src} status={el.status} />
+      ))}
+    </div>
+  );
+}
 
-      <div class="aside-profiles">
-        <div class="aside-profiles-username">
-          <img class="username-short-image" src="./assets/images/aside/f1.png" alt="" />
-          <div>
-            <p>formula1</p>
-            <p>Segue você</p>
-          </div>
+function Sugestao(props) {
+  return (
+    <div class="aside-profiles">
+      <div class="aside-profiles-username">
+        <img class="username-short-image" src={props.src} alt={props.alt} />
+        <div>
+          <p>{props.name}</p>
+          <p>{props.status}</p>
         </div>
-        <button>seguir</button>
       </div>
-
-      <div class="aside-profiles">
-        <div class="aside-profiles-username">
-          <img class="username-short-image" src="./assets/images/aside/xandzizi.jpg" alt="" />
-          <div>
-            <p>xandzizi</p>
-            <p>Novo no Instagram</p>
-          </div>
-        </div>
-        <button>seguir</button>
-      </div>
-
-      <div class="aside-profiles">
-        <div class="aside-profiles-username">
-          <img class="username-short-image" src="./assets/images/aside/neymar.jpeg" alt="" />
-          <div>
-            <p>neymarjr</p>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <button>seguir</button>
-      </div>
-
-      <div class="aside-profiles">
-        <div class="aside-profiles-username">
-          <img class="username-short-image" src="./assets/images/aside/kevinhart.jpg" alt="" />
-          <div>
-            <p>kevinhart4real</p>
-            <p>Segue você</p>
-          </div>
-        </div>
-        <button>seguir</button>
-      </div>
-
+      <button>seguir</button>
     </div>
   );
 }
