@@ -1,9 +1,9 @@
 export default function Usuario() {
   return (
-    <div class="aside-profiles">
-      <div class="aside-profiles-username" data-test="user">
+    <div className="aside-profiles">
+      <div className="aside-profiles-username" data-test="user">
         <img
-          class="username-large-image"
+          className="username-large-image"
           src="./assets/images/story/guilhiz.jpeg"
           alt="profile image"
           data-test="profile-image"

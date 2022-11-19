@@ -33,24 +33,4 @@ const stories = [
   },
 ];
 
-export default function Stories() {
-  return (
-    <div class="container-story">
-      {stories.map((el) => (
-        <Storie name={el.name} src={el.src} />
-      ))}
-    </div>
-  );
-}
-
-function Storie(props) {
-  console.log(props);
-  return (
-    <div class="story-content">
-      <div class="story-image">
-        <img src={props.src} alt="profile picture" />
-      </div>
-      <p>{props.name}</p>
-    </div>
-  );
-}
+export default stories

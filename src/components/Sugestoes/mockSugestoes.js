@@ -31,34 +31,4 @@ const sugestoes = [
   },
 ];
 
-export default function Sugestoes() {
-  return (
-    <div>
-      <div class="aside-suggestion">
-        <div>
-          <span>Sugestões para você</span>
-        </div>
-        <button>Ver tudo</button>
-      </div>
-
-      {sugestoes.map((el) => (
-        <Sugestao name={el.name} alt={el.alt} src={el.src} status={el.status} />
-      ))}
-    </div>
-  );
-}
-
-function Sugestao(props) {
-  return (
-    <div class="aside-profiles">
-      <div class="aside-profiles-username">
-        <img class="username-short-image" src={props.src} alt={props.alt} />
-        <div>
-          <p>{props.name}</p>
-          <p>{props.status}</p>
-        </div>
-      </div>
-      <button>seguir</button>
-    </div>
-  );
-}
+export default sugestoes

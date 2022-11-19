@@ -4,7 +4,7 @@ import Corpo from "./Corpo"
 
 export default function App() {
   return (
-    <div class="container">
+    <div className="container">
       <NavBar/>
       <Corpo />
       <Fundo/>
