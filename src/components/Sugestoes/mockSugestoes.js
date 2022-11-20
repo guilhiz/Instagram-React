@@ -24,10 +24,10 @@ const sugestoes = [
     alt: "Neymar profile image",
   },
   {
-    src: "assets/images/aside/kevinhart.jpg",
-    name: "kevinhart4real",
+    src: "assets/images/aside/henryCavil.jpg",
+    name: "henrycavill",
     status: "Segue você",
-    alt: "Kevin Hart profile image",
+    alt: "henrycavill profile image",
   },
 ];
 

@@ -16,8 +16,8 @@ const stories = [
     name: "loud",
   },
   {
-    src: "assets/images/story/muzy.jpeg",
-    name: "paulomuzy",
+    src: "assets/images/story/bivolt.jpg",
+    name: "bivolt",
   },
   {
     src: "assets/images/story/driven1.png",
