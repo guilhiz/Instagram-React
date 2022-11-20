@@ -31,4 +31,4 @@ const sugestoes = [
   },
 ];
 
-export default sugestoes
+export default sugestoes;

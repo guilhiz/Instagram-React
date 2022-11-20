@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Media from "../Media"
+import Media from "../Media";
 
 export default function Post(props) {
   const [like, setLike] = useState(true);
   const [save, setSave] = useState(true);
   const [likeComment1, setLikeComment1] = useState(true);
   const [likeComment2, setLikeComment2] = useState(true);
+  const [heartAnimation, setHeartAnimation] = useState(true);
 
   return (
     <div className="container-post" data-test="post">
@@ -17,18 +18,29 @@ export default function Post(props) {
         <ion-icon name="props.ellipsis-horizontal-outline"></ion-icon>
       </div>
       <div
-        className="post-image" data-test="post-image"
-        onDoubleClick={() => {setLike(false);}}
+        className="post-image"
+        data-test="post-image"
+        onDoubleClick={() => {
+          setLike(false);
+          setHeartAnimation(false);
+          setTimeout(() => setHeartAnimation(() => true), 500)
+        }}
       >
-       <Media videoOgg={props.el.srcVideoOgg} videoMp4={props.el.srcVideoMp4}
-        postImg={props.el.srcImg}/>
+        {!heartAnimation ? <ion-icon name="heart"></ion-icon> : null}
+        <Media
+          videoOgg={props.el.srcVideoOgg}
+          videoMp4={props.el.srcVideoMp4}
+          postImg={props.el.srcImg}
+        />
       </div>
       <div className="post-footer">
         <div className="post-footer-icons">
           <div>
             <ion-icon
               data-test="like-post"
-              onClick={() => {setLike((current) => !current);}}
+              onClick={() => {
+                setLike((current) => !current);
+              }}
               name={!like ? "heart" : "heart-outline"}
             ></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
@@ -36,7 +48,9 @@ export default function Post(props) {
           </div>
           <div>
             <ion-icon
-              onClick={() => {setSave((current) => !current);}}
+              onClick={() => {
+                setSave((current) => !current);
+              }}
               data-test="save-post"
               name={!save ? "bookmark" : "bookmark-outline"}
             ></ion-icon>
@@ -56,7 +70,9 @@ export default function Post(props) {
             </p>
           </div>
           <ion-icon
-            onClick={() => {setLikeComment1((current) => !current);}}
+            onClick={() => {
+              setLikeComment1((current) => !current);
+            }}
             name={!likeComment1 ? "heart" : "heart-outline"}
           ></ion-icon>
         </div>
@@ -67,7 +83,9 @@ export default function Post(props) {
             </p>
           </div>
           <ion-icon
-            onClick={() => {setLikeComment2((current) => !current);}}
+            onClick={() => {
+              setLikeComment2((current) => !current);
+            }}
             name={!likeComment2 ? "heart" : "heart-outline"}
           ></ion-icon>
         </div>
