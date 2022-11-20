@@ -6,6 +6,7 @@ export default function Post(props) {
   const [likeComment1, setLikeComment1] = useState(true);
   const [likeComment2, setLikeComment2] = useState(true);
 
+
   return (
     <div className="container-post" data-test="post">
       <div className="post-header">
@@ -15,13 +16,12 @@ export default function Post(props) {
         </div>
         <ion-icon name="props.ellipsis-horizontal-outline"></ion-icon>
       </div>
-
-      <div className="post-image" data-test="post-image"
-      onDoubleClick={() => {setLike(false);}}
+      <div
+        className="post-image" data-test="post-image"
+        onDoubleClick={() => {setLike(false);}}
       >
-        <img src={props.el.srcPost} alt="post image" />
+        <img src={props.el.srcImg} alt="post image" />
       </div>
-
       <div className="post-footer">
         <div className="post-footer-icons">
           <div>
@@ -44,8 +44,8 @@ export default function Post(props) {
         <div className="post-footer-likes">
           <img src={props.el.srcLike} alt="profile picture" />
           <p data-test="likes-number">
-            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras {!like ? Number(props.el.likeNumber) + 1 : props.el.likeNumber}{" "}
-            pessoas
+            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras{" "}
+            {!like ? Number(props.el.likeNumber) + 1 : props.el.likeNumber} pessoas
           </p>
         </div>
         <div className="post-footer-commentary">
@@ -83,6 +83,7 @@ export default function Post(props) {
   );
 }
 
-function like(setLike) {
-  setLike("heart");
+
+function Video() {
+
 }

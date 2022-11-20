@@ -2,7 +2,7 @@ const posts = [
   {
     srcProfile: "assets/images/story/loud-story.jpg",
     name: "loud",
-    srcPost: "assets/images/loud-champions.jpg",
+    srcImg: "assets/images/loud-champions.jpg",
     srcLike: "assets/images/story/sacy.jpg",
     nameLike: "sacy",
     likeNumber: "995",
@@ -15,7 +15,7 @@ const posts = [
   {
     srcProfile: "assets/images/barked 2.svg",
     name: "barked",
-    srcPost: "assets/images/BlackBear.jpg",
+    srcImg: "assets/images/BlackBear.jpg",
     srcLike: "assets/images/adorableanimals 2.svg",
     nameLike: "adorable_animals",
     likeNumber: "454",
@@ -28,7 +28,7 @@ const posts = [
   {
     srcProfile: "assets/images/meowed 2.svg",
     name: "meowed",
-    srcPost: "assets/images/gato-telefone 1.svg",
+    srcImg: "assets/images/gato-telefone 1.svg",
     srcLike: "assets/images/story/muzy.jpeg",
     nameLike: "muzy",
     likeNumber: "823",
@@ -37,7 +37,7 @@ const posts = [
     nameCommentTwo: "jojo",
     commentTwo: "Ótima foto",
     commentNumber: "140",
-  },
+  }
 ];
 
 export default posts

@@ -1,9 +1,9 @@
 const sugestoes = [
   {
-    src: "assets/images/aside/aspas.jpeg",
-    name: "aspaszin",
+    src: "assets/images/aside/brucewayne.jpg",
+    name: "brucewayne",
     status: "Segue você",
-    alt: "Aspas profile image",
+    alt: "bruce wayne profile image",
   },
   {
     src: "assets/images/aside/f1.png",
