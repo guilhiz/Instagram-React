@@ -7,6 +7,7 @@ export default function Stories() {
       {mockStories.map((el) => (
         <Storie key={el.name} name={el.name} src={el.src} />
       ))}
+      <ion-icon name="chevron-forward-circle"></ion-icon>
     </div>
   );
 }

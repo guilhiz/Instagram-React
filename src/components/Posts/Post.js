@@ -1,4 +1,11 @@
+import React, { useState } from "react";
+
 export default function Post(props) {
+  const [like, setLike] = useState(true);
+  const [save, setSave] = useState(true);
+  const [likeComment1, setLikeComment1] = useState(true);
+  const [likeComment2, setLikeComment2] = useState(true);
+
   return (
     <div className="container-post" data-test="post">
       <div className="post-header">
@@ -8,24 +15,36 @@ export default function Post(props) {
         </div>
         <ion-icon name="props.ellipsis-horizontal-outline"></ion-icon>
       </div>
-      <div className="post-image" data-test="post-image">
+
+      <div className="post-image" data-test="post-image"
+      onDoubleClick={() => {setLike(false);}}
+      >
         <img src={props.el.srcPost} alt="post image" />
       </div>
+
       <div className="post-footer">
         <div className="post-footer-icons">
           <div>
-            <ion-icon data-test="like-post" name="heart-outline"></ion-icon>
+            <ion-icon
+              data-test="like-post"
+              onClick={() => {setLike((current) => !current);}}
+              name={!like ? "heart" : "heart-outline"}
+            ></ion-icon>
             <ion-icon name="chatbubble-outline"></ion-icon>
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div>
-            <ion-icon data-test="save-post" name="bookmark-outline"></ion-icon>
+            <ion-icon
+              onClick={() => {setSave((current) => !current);}}
+              data-test="save-post"
+              name={!save ? "bookmark" : "bookmark-outline"}
+            ></ion-icon>
           </div>
         </div>
         <div className="post-footer-likes">
           <img src={props.el.srcLike} alt="profile picture" />
           <p data-test="likes-number">
-            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras {props.el.likeNumber}{" "}
+            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras {!like ? Number(props.el.likeNumber) + 1 : props.el.likeNumber}{" "}
             pessoas
           </p>
         </div>
@@ -35,7 +54,10 @@ export default function Post(props) {
               {props.el.nameComment} <span>{props.el.comment}</span>
             </p>
           </div>
-          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon
+            onClick={() => {setLikeComment1((current) => !current);}}
+            name={!likeComment1 ? "heart" : "heart-outline"}
+          ></ion-icon>
         </div>
         <div className="post-footer-commentary">
           <div>
@@ -43,7 +65,10 @@ export default function Post(props) {
               {props.el.nameCommentTwo} <span>{props.el.commentTwo}</span>
             </p>
           </div>
-          <ion-icon name="heart-outline"></ion-icon>
+          <ion-icon
+            onClick={() => {setLikeComment2((current) => !current);}}
+            name={!likeComment2 ? "heart" : "heart-outline"}
+          ></ion-icon>
         </div>
         <button className="post-footer-button">
           Ver todos os {props.el.commentNumber} comentários
@@ -56,4 +81,8 @@ export default function Post(props) {
       </div>
     </div>
   );
+}
+
+function like(setLike) {
+  setLike("heart");
 }

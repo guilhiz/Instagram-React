@@ -1,4 +1,8 @@
+import React, { useState } from "react";
+
 export default function Usuario() {
+const [name, setName] = useState("𝓛𝓾𝓲𝔃 𝓖𝓾𝓲𝓵𝓱𝓮𝓻𝓶𝓮")
+
   return (
     <div className="aside-profiles">
       <div className="aside-profiles-username" data-test="user">
@@ -11,7 +15,7 @@ export default function Usuario() {
         <div>
           <p>guilhiz</p>
           <span data-test="name">
-            𝓛𝓾𝓲𝔃 𝓖𝓾𝓲𝓵𝓱𝓮𝓻𝓶𝓮
+            {name}
             <ion-icon data-test="edit-name" name="pencil"></ion-icon>
           </span>
         </div>

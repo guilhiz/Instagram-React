@@ -512,6 +512,14 @@ ion-icon:hover {
   opacity: 0.7;
 }
 
+ion-icon[name="heart"] {
+  color: #ed4956;
+}
+
+ion-icon[name="bookmark"] {
+  color: #000000;
+}
+
 button {
   border: none;
   background-color: transparent;
