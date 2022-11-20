@@ -7,7 +7,7 @@ export default function Post(props) {
   const [likeComment1, setLikeComment1] = useState(true);
   const [likeComment2, setLikeComment2] = useState(true);
   const [heartAnimation, setHeartAnimation] = useState(true);
-  const timeToEndAnimation = 500
+  const timeToEndAnimation = 500;
 
   return (
     <div className="container-post" data-test="post">
