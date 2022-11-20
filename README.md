@@ -42,4 +42,4 @@ Projeto 7 - Instagram React criado durante o bootcamp de desenvolvimento web da 
 ```
 
 ## :eyes: [Visualização](https://guilhiz-react-instagram.netlify.app/)
-![insta](https://user-images.githubusercontent.com/109693663/202929879-ab099a97-05d5-46f7-92b8-5e23310a2dfe.gif)
+![inst](https://user-images.githubusercontent.com/109693663/202932601-fb406010-01df-457c-949f-c347d7381641.gif)
