@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import Media from "../Media"
 
 export default function Post(props) {
   const [like, setLike] = useState(true);
   const [save, setSave] = useState(true);
   const [likeComment1, setLikeComment1] = useState(true);
   const [likeComment2, setLikeComment2] = useState(true);
-
 
   return (
     <div className="container-post" data-test="post">
@@ -20,7 +20,8 @@ export default function Post(props) {
         className="post-image" data-test="post-image"
         onDoubleClick={() => {setLike(false);}}
       >
-        <img src={props.el.srcImg} alt="post image" />
+       <Media videoOgg={props.el.srcVideoOgg} videoMp4={props.el.srcVideoMp4}
+        postImg={props.el.srcImg}/>
       </div>
       <div className="post-footer">
         <div className="post-footer-icons">
@@ -81,9 +82,4 @@ export default function Post(props) {
       </div>
     </div>
   );
-}
-
-
-function Video() {
-
 }
