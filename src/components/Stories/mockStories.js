@@ -33,4 +33,4 @@ const stories = [
   },
 ];
 
-export default stories
+export default stories;

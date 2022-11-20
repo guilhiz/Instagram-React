@@ -54,7 +54,7 @@ const posts = [
     nameCommentTwo: "callie",
     commentTwo: "kkkk muito bom",
     commentNumber: "85",
-  }
+  },
 ];
 
-export default posts
+export default posts;

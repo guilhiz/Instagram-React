@@ -1,6 +1,6 @@
 export default function Media(props) {
   if (props.postImg) {
-    return <img src={props.postImg} alt="post image" />
+    return <img src={props.postImg} alt="post image" />;
   }
   return (
     <video autoPlay loop muted>
@@ -8,5 +8,5 @@ export default function Media(props) {
       <source src={props.videoOgg} type="video/ogg" />
       Your browser does not support the video tag.
     </video>
-    )
+  );
 }

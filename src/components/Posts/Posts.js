@@ -1,5 +1,5 @@
-import mockPosts from "./mockPosts"
-import Post from "./Post"
+import mockPosts from "./mockPosts";
+import Post from "./Post";
 
 export default function Posts() {
   return (

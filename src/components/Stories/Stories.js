@@ -1,5 +1,5 @@
-import mockStories from "./mockStories"
-import Storie from "./Storie"
+import mockStories from "./mockStories";
+import Storie from "./Storie";
 
 export default function Stories() {
   return (

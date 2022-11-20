@@ -1,13 +1,13 @@
 import Fundo from "./Fundo";
 import NavBar from "./NavBar";
-import Corpo from "./Corpo"
+import Corpo from "./Corpo";
 
 export default function App() {
   return (
     <div className="container">
-      <NavBar/>
+      <NavBar />
       <Corpo />
-      <Fundo/>
+      <Fundo />
     </div>
-  )
+  );
 }
