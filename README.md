@@ -1,6 +1,6 @@
 <h1 align="center">Instagram React</h1>
 
-![insta](https://user-images.githubusercontent.com/109693663/202932771-1261d957-51ea-4e3e-a062-780f1f97a3e4.gif)
+![insta](https://user-images.githubusercontent.com/109693663/203133747-00bcfd95-2835-4da1-bc4f-e13adac9ec72.gif)
 
 Projeto 7 - Instagram React criado durante o bootcamp de desenvolvimento web da <a href="https://www.driven.com.br/" target="_blank">Driven :computer:</a>
 
