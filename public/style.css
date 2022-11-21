@@ -145,8 +145,7 @@ section {
   border-radius: 50%;
   width: 66px;
   height: 66px;
-  background: radial-gradient(rgb(0, 0, 0, 0.15) 60%, transparent 0%),
-    radial-gradient(white 65%, transparent 0%), linear-gradient(to top right, orange, deeppink);
+  background: radial-gradient(rgb(0, 0, 0, 0.15) 60%, transparent 0%), radial-gradient(white 65%, transparent 0%), linear-gradient(to top right, orange, deeppink);
 }
 
 .story-image img {
@@ -356,6 +355,11 @@ aside {
 
 .aside-profiles button {
   color: var(--follow-color);
+  font-weight: 500;
+}
+.aside-profiles .button-follow {
+  color: var(--icon-color);
+
 }
 
 .aside-profiles-username {
@@ -561,4 +565,5 @@ button:hover {
 
 video {
   width: 614px;
+  cursor: pointer;
 }

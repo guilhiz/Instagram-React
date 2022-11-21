@@ -1,4 +1,6 @@
+import React, { useState } from "react";
 export default function Sugestao(props) {
+  const [follow, setFollow] = useState(true);
   return (
     <div className="aside-profiles">
       <div className="aside-profiles-username">
@@ -8,7 +10,14 @@ export default function Sugestao(props) {
           <p>{props.status}</p>
         </div>
       </div>
-      <button>seguir</button>
+      <button
+        className={!follow && "button-follow"}
+        onClick={() => {
+          setFollow((current) => !current);
+        }}
+      >
+        {follow ? "Seguir" : "Seguindo"}
+      </button>
     </div>
   );
 }
