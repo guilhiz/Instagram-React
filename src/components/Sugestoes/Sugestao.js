@@ -11,7 +11,7 @@ export default function Sugestao(props) {
         </div>
       </div>
       <button
-        className={!follow && "button-follow"}
+        className={!follow ? "button-follow" : null}
         onClick={() => {
           setFollow((current) => !current);
         }}

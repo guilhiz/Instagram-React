@@ -8,6 +8,7 @@ export default function Post(props) {
   const [likeComment2, setLikeComment2] = useState(true);
   const [heartAnimation, setHeartAnimation] = useState(true);
   const timeToEndAnimation = 500;
+  console.log(numberWithDot(props.el.likeNumber))
 
   return (
     <div className="container-post" data-test="post">
@@ -56,7 +57,7 @@ export default function Post(props) {
         <div className="post-footer-likes">
           <img src={props.el.srcLike} alt="profile picture" />
           <p data-test="likes-number">
-            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras {!like ? Number(props.el.likeNumber) + 1 : props.el.likeNumber} pessoas
+            <span>Curtido por</span> {props.el.nameLike} <span>e</span> outras {!like ? numberWithDot(props.el.likeNumber) : props.el.likeNumber} pessoas
           </p>
         </div>
         <div className="post-footer-commentary">
@@ -94,4 +95,9 @@ export default function Post(props) {
       </div>
     </div>
   );
+}
+
+function numberWithDot(x) {
+  const soma = (Number(x.replace(/[^\d]+/g,'')) + 1)
+  return soma.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
