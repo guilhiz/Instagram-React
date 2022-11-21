@@ -1,5 +1,7 @@
 <h1 align="center">Instagram React</h1>
 
+![insta](https://user-images.githubusercontent.com/109693663/202932771-1261d957-51ea-4e3e-a062-780f1f97a3e4.gif)
+
 Projeto 7 - Instagram React criado durante o bootcamp de desenvolvimento web da <a href="https://www.driven.com.br/" target="_blank">Driven :computer:</a>
 
 ## :robot: Tecnologias Utilizadas
@@ -41,6 +43,4 @@ Projeto 7 - Instagram React criado durante o bootcamp de desenvolvimento web da 
 
 ```
 
-## :eyes: [Visualização](https://guilhiz-react-instagram.netlify.app/)
-![insta](https://user-images.githubusercontent.com/109693663/202932771-1261d957-51ea-4e3e-a062-780f1f97a3e4.gif)
-g
+## :eyes: [Deploy](https://guilhiz-instagram-react.netlify.app/)
