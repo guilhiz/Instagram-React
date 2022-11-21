@@ -1,18 +1,5 @@
 const posts = [
   {
-    srcProfile: "assets/images/story/loud-story.jpg",
-    name: "loud",
-    srcImg: "assets/images/loud-champions.jpg",
-    srcLike: "assets/images/story/sacy.jpg",
-    nameLike: "sacy",
-    likeNumber: "995",
-    nameComment: "brad_breach",
-    comment: "Melhores do mundo",
-    nameCommentTwo: "yaki_sova",
-    commentTwo: "Faz o L!!!",
-    commentNumber: "322",
-  },
-  {
     srcProfile: "assets/images/aside/f1.png",
     name: "formula1",
     srcImg: "",
@@ -26,6 +13,19 @@ const posts = [
     nameCommentTwo: "falkol",
     commentTwo: "Incrível",
     commentNumber: "234",
+  },
+  {
+    srcProfile: "assets/images/story/loud-story.jpg",
+    name: "loud",
+    srcImg: "assets/images/loud-champions.jpg",
+    srcLike: "assets/images/story/sacy.jpg",
+    nameLike: "sacy",
+    likeNumber: "995",
+    nameComment: "brad_breach",
+    comment: "Melhores do mundo",
+    nameCommentTwo: "yaki_sova",
+    commentTwo: "Faz o L!!!",
+    commentNumber: "322",
   },
   {
     srcProfile: "assets/images/meowed 2.svg",
